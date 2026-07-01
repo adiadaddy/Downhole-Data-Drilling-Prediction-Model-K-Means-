@@ -6,7 +6,7 @@ Automated lithofacies classification using K-Means clustering. This project proc
 - **Data-Driven Analysis**: Uses multiple log inputs to build a unique fingerprints for each rock type.
 - **Efficient Processing**: Eliminates the need for manual, time-consuming core interpretation.
 
-# ** How It Works**
+# **How It Works**
 - Cleans raw log data and handles missing values.
 - Normalizes various physical measurements to ensure the model isn't biased by different units of measure.
 - Applies the K-Means algorithm to define 3 distinct geological clusters based on the physical properties of the formation.
