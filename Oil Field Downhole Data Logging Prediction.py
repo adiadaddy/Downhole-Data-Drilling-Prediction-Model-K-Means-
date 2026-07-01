@@ -4,7 +4,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 
-path = r"C:\Users\admin\Downloads\archive (1)\log.csv"
+path = r"C:\Users\admin\Downloads\archive (1)\log.csv" # Patch in your dataset's file path 
 data = pd.read_csv(path)
 
 print("Data Diagnostic")
