@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 path = r"C:\Users\admin\Downloads\archive (1)\log.csv"
 data = pd.read_csv(path)
 
-print("--- Data Diagnostic ---")
+print("Data Diagnostic")
 print(f"Original dataset size: {len(data)} rows")
 print("Columns found in your CSV:", list(data.columns))
 
@@ -20,7 +20,7 @@ X = data_cleaned[features]
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-print("--- Running K-Means Clustering ---")
+print("Running K-Means Clustering")
 kmeans = KMeans(n_clusters=3, random_state=42, n_init=10)
 data_cleaned['Cluster_ID'] = kmeans.fit_predict(X_scaled)
 
@@ -31,7 +31,7 @@ output_path = r"C:\Users\admin\Downloads\archive (1)\clustered_log_results.csv"
 data_cleaned.to_csv(output_path, index=False)
 print(f"\nResults saved successfully to: {output_path}")
 
-print("\n--- GEOLOGICAL CLUSTER PROFILES ---")
+print("\n GEOLOGICAL CLUSTER PROFILES")
 
 cluster_profiles = data_cleaned.groupby('Cluster_ID')[features].mean()
 
